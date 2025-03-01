@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>С 8 Марта!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Верхняя часть с якорями -->
+    <header>
+        <nav>
+            <a href="#congrats">Поздравление</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#wishes">Пожелания</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <!-- Поздравление -->
+    <section id="congrats" class="congrats-section">
+        <h1>С Международным женским днём!</h1>
+        <p>Дорогие женщины, пусть ваша жизнь будет наполнена радостью, любовью и вдохновением! Спасибо за вашу доброту и теплоту!</p>
+        <button class="cta-button">Отправить поздравление</button>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="gallery-section">
+        <h2>Галерея цветов</h2>
+        <div class="gallery-grid">
+            <img src="https://avatars.mds.yandex.net/i?id=932cb74e60f5b795cf655356bf483ff14f2705d00c5e357a-13059231-images-thumbs&n=13" alt="Цветок 1">
+            <img src="https://avatars.mds.yandex.net/i?id=4ce33c68371dc0d30ca992a71734508eca3e4890-4837951-images-thumbs&n=13" alt="Цветок 2">
+            <img src="https://avatars.mds.yandex.net/i?id=b70f864f30cb97cef0b2a0ed95b91f3e2e402f14-8497330-images-thumbs&n=13" alt="Цветок 3">
+        </div>
+    </section>
+
+    <!-- Пожелания -->
+    <section id="wishes" class="wishes-section">
+        <h2>Пожелания</h2>
+        <div class="wishes-grid">
+            <div class="wish-card">
+                <h3>Здоровья</h3>
+                <p>Пусть ваше здоровье будет крепким, а дни — яркими!</p>
+            </div>
+            <div class="wish-card">
+                <h3>Счастья</h3>
+                <p>Пусть каждый день приносит радость и улыбки!</p>
+            </div>
+            <div class="wish-card">
+                <h3>Любви</h3>
+                <p>Пусть ваше сердце всегда будет наполнено теплом и любовью!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact-section">
+        <h2>отправить поздравление</h2>
+        <form>
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Ваш email" required>
+            <textarea placeholder="Ваше сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <!-- Анимация цветочков -->
+    <div class="flower-animation"></div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+    <script >// Карусель
+       // Карусель
+
+
+// Анимация цветочков
+const flowerContainer = document.querySelector('.flower-animation');
+
+function createFlower() {
+    const flower = document.createElement('div');
+    flower.innerHTML = '🌸';
+    flower.style.position = 'absolute';
+    flower.style.left = `${Math.random() * 100}vw`;
+    flower.style.fontSize = `${Math.random() * 24 + 16}px`;
+    flower.style.animationDuration = `${Math.random() * 5 + 3}s`;
+    flower.style.animationName = 'fall';
+    flowerContainer.appendChild(flower);
+
+    setTimeout(() => {
+        flower.remove();
+    }, 8000);
+}
+
+setInterval(createFlower, 300);</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
